@@ -6,7 +6,6 @@ screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Меню игры")
 
 clock = pygame.time.Clock()
-
 # Цвета
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
