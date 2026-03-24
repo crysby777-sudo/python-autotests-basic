@@ -3,7 +3,7 @@ import sys
 
 pygame.init()
 screen = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("Меню игры")
+pygame.display.set_caption("Меню игры тест")
 clock = pygame.time.Clock()
 
 # Цвета
