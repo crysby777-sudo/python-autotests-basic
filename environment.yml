@@ -1,0 +1,10 @@
+name: PythonTestConda
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13
+  - requests
+  - selenium
+  - webdriver-manager
+  - pytest
