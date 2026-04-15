@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6ae3257-8b66-4dc8-8965-53c7507fe9f8" name="Изменения" comment="" />
+    <list default="true" id="e6ae3257-8b66-4dc8-8965-53c7507fe9f8" name="Изменения" comment="Проверка">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +28,9 @@
     &quot;second&quot;: &quot;9e2c824a-faa6-4e7b-84f4-6b55c8884fe3&quot;
   }
 }</component>
+  <component name="Make.Settings">
+    <option name="path" value="C:\Users\Pawel\miniconda3\envs\python-autotests-basic\Library\usr\bin\make.exe" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -36,12 +41,58 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python тесты.Python тесты в test_skillbox.py.executor": "Run",
+    "Python тесты.Python тесты для src.tests.test_skillbox.TestSkillbox.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true"
+    "ignore.virus.scanning.warn.message": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.make",
+    "Цель Makefile.Makefile.executor": "Run",
+    "Цель Makefile.Без названия.executor": "Run"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pawel\PycharmProjects\python-autotests-basic" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Без названия" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" nameIsGenerated="true">
+      <makefile filename="C:\Users\Pawel\PycharmProjects\python-autotests-basic\Makefile" target="" workingDirectory="C:\Users\Pawel\PycharmProjects\python-autotests-basic" arguments="">
+        <envs>
+          <env name="TMP" value="C:\tmp" />
+        </envs>
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration name="Python тесты для src.tests.test_skillbox.TestSkillbox" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-autotests-basic" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;src.tests.test_skillbox.TestSkillbox&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python тесты.Python тесты для src.tests.test_skillbox.TestSkillbox" />
+      <item itemvalue="Цель Makefile.Без названия" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python тесты.Python тесты для src.tests.test_skillbox.TestSkillbox" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -57,6 +108,19 @@
       <option name="presentableId" value="Default" />
       <updated>1776197366945</updated>
     </task>
+    <task id="LOCAL-00001" summary="Проверка">
+      <option name="closed" value="true" />
+      <created>1776198530700</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1776198530700</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Проверка" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проверка" />
   </component>
 </project>
