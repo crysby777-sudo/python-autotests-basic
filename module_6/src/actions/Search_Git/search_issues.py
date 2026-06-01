@@ -27,5 +27,5 @@ def search_issues_and_get_matches(selenium,
     key_word = selenium.find_elements(By.XPATH, xpath)
 
     with step("Отправляем найденные названия задач для проверки"):
-        logging.info(f"Передача {key_word} для выполнения проверки")
+        logging.info("Передача элементов для выполнения проверки")
         return key_word
