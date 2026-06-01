@@ -1,0 +1,12 @@
+{
+  "chrome": {
+    "default": "latest",
+    "versions": {
+      "latest": {
+       "image": ["drivers/chromedriver.exe"],
+        "port": "4444",
+        "path": "/"
+      }
+    }
+  }
+}
