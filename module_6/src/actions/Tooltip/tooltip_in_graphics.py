@@ -12,12 +12,13 @@ def get_commit_activity_tooltip_data(selenium, date_label="Sunday,  3 Aug 2025")
     with step("Установка явного ожидания загрузки DOM (15 секунд)"):
         wait = WebDriverWait(selenium, 15)
 
-    with step(f"Поиск колонки'{date_label}' на графике"):
+    with step(f"Поиск колонки '{date_label}' на графике"):
         column_locator = (By.XPATH, f"//*[contains(@aria-label,'{date_label}')]")
+
     with step(" Установка явного ожидания (15 секунд) появления колонки"):
         column = wait.until(EC.presence_of_element_located(column_locator))
 
-    with step(" Наводим указатель мыши на элемент для активации тултипа'"):
+    with step("Наводим указатель мыши на элемент для активации тултипа"):
         ActionChains(selenium).move_to_element(column).perform()
 
     with step(" Ждем,пока график применит hover-класс к этой колонке"):

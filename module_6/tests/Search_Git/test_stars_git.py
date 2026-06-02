@@ -1,9 +1,10 @@
 import re
-from allure import feature, step, title
+from allure import feature, step, title, suite
 from src.actions.Search_Git.search_repo_stars import search_repos_and_get_star_elements
 import logging
 
 
+@suite("Поиск и фильтрация по количеству звезд репозиториев")
 @feature("Поиск и фильтрация по репозиториям")
 class TestRepoStars:
     @title("Поиск и фильтрация репозиториев по количеству звезд")

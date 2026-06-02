@@ -1,0 +1,9 @@
+INFO     root:browser.py:12 Запуск Сhrome браузера...
+INFO     root:browser.py:24 Начало тестирования с помощью браузера Сhrome, версия 148.0.7778.217 ...
+INFO     root:test_tooltip.py:11 Запуск теста test_tooltip.py
+INFO     root:tooltip_in_graphics.py:11 Выполнение манипуляций на странице для активации тултипа
+INFO     root:tooltip_in_graphics.py:32 Данные Week of 3 Aug, 2025
+Commits 429 из тултипа возвращаем для проверки
+INFO     root:test_tooltip.py:22 Данные  из тултипа сравниваем с ['3 Aug', '2025']
+INFO     root:test_tooltip.py:27 Завершение теста test_tooltip.py
+INFO     root:browser.py:26 Остановка браузера Сhrome ...

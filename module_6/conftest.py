@@ -9,6 +9,13 @@ pytest_plugins = [
 ]
 
 
+def pytest_configure(config):
+    allure_dir = config.getoption('--alluredir')
+    if allure_dir:
+        absolute_allure_dir = config.rootdir / allure_dir
+        config.option.allure_report_dir = absolute_allure_dir
+
+
 def pytest_addoption(parser):
     parser.addini("selenium_url", "Selenium Hub url")
     parser.addini("browser_name", "Browser name for tests")

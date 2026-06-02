@@ -1,4 +1,5 @@
 import re
+import time
 from src.actions.Skillbox.skillbox_filters import apply_skillbox_filters_and_get_results
 from allure import suite, feature, step, title
 import pytest_check as check
@@ -15,6 +16,7 @@ class TestSkillboxRU:
             selenium.get('https://skillbox.ru/code/')
         with step("Устанавливаем полноэкранный режим браузера"):
             selenium.maximize_window()
+            time.sleep(3)
 
         with step("Вызываем функцию для взаимодействия с элементами на странице"):
             profession_filter, duration_filter = apply_skillbox_filters_and_get_results(selenium)

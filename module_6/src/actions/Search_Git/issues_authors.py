@@ -18,6 +18,11 @@ def get_issue_authors_by_name(selenium, author_name):
 
     with step(f"Вводим название автора '{author_name}'"):
         selenium.find_element(By.XPATH, "//input[@aria-label='Filter authors']").send_keys(author_name)
+
+    with step(f" Ожидаем появление имени автора '{author_name}'"):
+        wait.until(EC.presence_of_element_located((By.XPATH, f"//span[contains(., 'author:{author_name}')]")))
+
+    with step(f" Выполняем выбор отфильтрованного автора '{author_name}'"):
         selenium.find_element(By.XPATH, f"//span[contains(., 'author:{author_name}')]").click()
 
     with step("Ждём загрузки отфильтрованных задач"):

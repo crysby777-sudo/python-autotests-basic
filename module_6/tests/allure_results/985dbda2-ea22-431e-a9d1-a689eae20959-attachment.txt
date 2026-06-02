@@ -1,0 +1,9 @@
+INFO     root:browser.py:12 Запуск Сhrome браузера...
+INFO     root:browser.py:24 Начало тестирования с помощью браузера Сhrome, версия 148.0.7778.217 ...
+INFO     root:url_github.py:9 Запуск теста test_search_git.py
+INFO     root:url_github.py:10 Переход на страницу https://github.com/microsoft/vscode/issues
+INFO     root:issues_authors.py:10 Выполнение сценария на странице: поиск элементов и ввод данных
+INFO     root:issues_authors.py:34 Передача данных для выполнения проверки
+INFO     root:test_search_git.py:37 Выполняем проверку
+INFO     root:test_search_git.py:42 Завершение теста test_search_git.py
+INFO     root:browser.py:26 Остановка браузера Сhrome ...
