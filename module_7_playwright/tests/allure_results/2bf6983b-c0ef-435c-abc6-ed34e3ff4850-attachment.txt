@@ -1,0 +1,6 @@
+INFO     root:test_tooltip.py:12 Запуск теста test_tooltip.py
+INFO     root:tooltip_in_graphics.py:9 Выполнение манипуляций на странице для активации тултипа
+INFO     root:tooltip_in_graphics.py:25 Данные Week of 3 Aug, 2025
+ Commits	352 из тултипа возвращаем для проверки
+INFO     root:test_tooltip.py:21 Данные  из тултипа сравниваем с ['3 Aug', '2025']
+INFO     root:test_tooltip.py:25 Завершение теста test_tooltip.py

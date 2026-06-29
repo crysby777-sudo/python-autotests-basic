@@ -1,0 +1,5 @@
+INFO     root:test_skillbox.py:13 Запуск теста test_skillbox.py
+INFO     root:skillbox_filters.py:8 Поиск элементов и применение фильтров на странице
+INFO     root:skillbox_filters.py:36 Найдено: профессий=3, длительностей=3
+INFO     root:skillbox_filters.py:39 Возвращаем значения для проверки
+INFO     root:test_skillbox.py:31 Завершение теста test_skillbox.py

@@ -1,0 +1,6 @@
+INFO     root:test_stars_git.py:13 Запуск теста test_stars_git.py
+INFO     root:search_repo_stars.py:8 Переходим к заполнению формы расширенного поиска
+INFO     root:search_repo_stars.py:27 Передача данных для выполнения проверки
+INFO     root:test_stars_git.py:22 Выполняем проверку списка репозиториев с количеством звёзд '>20000'
+INFO     root:test_stars_git.py:32 Количество записей в списке репозиториев с количеством звёзд >20000: '10'
+INFO     root:test_stars_git.py:33 Завершение теста test_stars_git.py

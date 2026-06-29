@@ -1,0 +1,11 @@
+name: module_7_playwright
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13
+  - requests
+  - pytest
+  - allure-pytest
+  - flake8
+  - pytest-playwright

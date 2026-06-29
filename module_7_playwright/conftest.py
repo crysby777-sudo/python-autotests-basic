@@ -1,0 +1,18 @@
+import logging.config
+from os import path
+
+
+lof_file_path = path.join(path.dirname(path.abspath(__file__)), 'src/utils/logging.ini')
+logging.config.fileConfig(lof_file_path)
+
+pytest_plugins = [
+    'src.fixtures.base',
+    'src.fixtures.wite',
+]
+
+
+def pytest_configure(config):
+    allure_dir = config.getoption('--alluredir')
+    if allure_dir:
+        absolute_allure_dir = config.rootdir / allure_dir
+        config.option.allure_report_dir = absolute_allure_dir

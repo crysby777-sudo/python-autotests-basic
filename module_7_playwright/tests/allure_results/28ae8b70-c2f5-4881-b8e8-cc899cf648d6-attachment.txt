@@ -1,0 +1,5 @@
+INFO     root:issues_authors.py:8 Выполнение сценария на странице: поиск элементов и ввод данных
+INFO     root:issues_authors.py:20 Найдено: записей на странице с автором 'bpasero'=25
+INFO     root:issues_authors.py:23 Передача данных для выполнения проверки
+INFO     root:test_search_git.py:40 Выполняем проверку
+INFO     root:test_search_git.py:45 Завершение теста test_search_git.py
