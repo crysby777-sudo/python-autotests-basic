@@ -1,0 +1,13 @@
+name: final_project_pizzeria
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13
+  - requests
+  - selenium
+  - webdriver-manager
+  - pytest
+  - allure-pytest
+  - flake8
+  - faker
