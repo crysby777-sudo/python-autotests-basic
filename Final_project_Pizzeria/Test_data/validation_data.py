@@ -6,8 +6,8 @@ class ValidationField:
     NAME_FIELD_VALID = [
         ("valid_russian", "Олег", "+79991234567", None),
         ("valid_hyphen", "Анна-Мария", "+79991234567", None),
-        ("valid_latin", "Oleg", "+79991234567", None)
-
+        ("valid_latin", "Oleg", "+79991234567", None),
+        ("valid_20_characters", "OlegOlegOlegOlegOleg", "+79991234567", None)
     ]
 
     NAME_FIELD_INVALID = [
@@ -15,7 +15,8 @@ class ValidationField:
         ("invalid_spec_symbols", "Олег!", "+79991234567", "Введен неверный формат имени"),
         ("invalid_empty", "", "+79991234567", 'Поле "Имя" обязательно для заполнения'),
         ("invalid_one_char", "И", "+79991234567", "Введен неверный формат имени"),
-        ("invalid_one_space", " ", "+79991234567", "Введен неверный формат имени")
+        ("invalid_one_space", " ", "+79991234567", "Введен неверный формат имени"),
+        ("invalid_21_symbols", "OlegOlegOlegOlegOlegO", "+79991234567", "Введен неверный формат имени")
     ]
 
     PHONE_FIELD_VALID = [
@@ -27,7 +28,8 @@ class ValidationField:
 
     PHONE_FIELD_INVALID = [
         ("invalid_formatted", "Олег", "8 (999) 123-45-67", "Введен неверный формат телефона"),
-        ("invalid_short", "Олег", "+7999123", "Введен неверный формат телефона"),
+        ("invalid_short_10_digits", "Олег", "+7999123490", "Введен неверный формат телефона"),
+        ("invalid_12_digits", "Олег", "+799912349012", "Введен неверный формат телефона"),
         ("invalid_letters", "Олег", "+7999123456a", "Введен неверный формат телефона"),
         ("invalid_standard", "Олег", "-79991234567", "Введен неверный формат телефона"),
         ("invalid_empty", "Олег", "", 'Поле "Телефон" обязательно для заполнения'),
