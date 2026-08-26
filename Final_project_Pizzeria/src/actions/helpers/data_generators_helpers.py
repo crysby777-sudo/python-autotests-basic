@@ -11,7 +11,7 @@ class UserDataGenerator:
     @staticmethod
     def get_fake_login():
         """Генерирует случайный логин на английском"""
-        login = fake.pystr(min_chars=5, max_chars=20)  # min_chars- минимальное кол-во символов, max_chars- максимальное
+        login = fake.pystr(min_chars=2, max_chars=20)  # min_chars- минимальное кол-во символов, max_chars- максимальное
         return login
 
     @staticmethod
