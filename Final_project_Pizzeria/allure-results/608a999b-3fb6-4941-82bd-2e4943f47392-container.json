@@ -1,0 +1,1 @@
+{"uuid": "78b7dc0c-8a41-460a-bcf2-bceda99fe069", "children": ["d9a80fd4-94da-48f3-824f-d69e648e8b4b"], "befores": [{"name": "open_url", "status": "passed", "start": 1787856672467, "stop": 1787856672468}], "afters": [{"name": "open_url::<lambda>", "start": 1787856688636}], "start": 1787856672467, "stop": 1787856688636}
