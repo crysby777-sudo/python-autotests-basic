@@ -6,6 +6,7 @@ variables:
   CONDA_PATH: "/root/miniconda3"
 
 cache:
+  key: conda-cache
   paths:
     - /root/miniconda3/envs/
 
@@ -28,7 +29,7 @@ before_script:
     conda init bash
     source ~/.bashrc
     
-    # Создание окружения
+    # Создание окружения из environment.yml
     ENV_NAME=$(grep '^name:' environment.yml | cut -d' ' -f2)
     if ! conda env list | grep -q $ENV_NAME; then
       conda env create -f environment.yml
@@ -48,3 +49,4 @@ run-tests:
       - reports/
     reports:
       junit: reports/junit.xml
+  timeout: 15m
