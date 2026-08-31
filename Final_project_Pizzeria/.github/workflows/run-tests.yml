@@ -1,0 +1,68 @@
+name: Run Selenium Tests with Conda
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:  # Позволяет запускать вручную из интерфейса GitHub
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    # Настройка вывода логов с цветами
+    defaults:
+      run:
+        shell: bash -l {0}  # Важно для активации conda-окружения
+    
+    steps:
+      # 1. Загружаем код из репозитория
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      # 2. Устанавливаем Miniconda
+      - name: Setup Conda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-variant: Miniforge3
+          miniforge-version: latest
+          use-mamba: true  # Mamba быстрее решает зависимости
+          environment-file: environment.yml
+          activate-environment: final_project_pizzeria # ⚠️ ИЗМЕНИТЕ на имя из вашего environment.yml
+          auto-activate-base: false
+      
+      # 3. Устанавливаем Chrome
+      - name: Install Chrome
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y wget gnupg unzip
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update -q
+          sudo apt-get install -y google-chrome-stable
+          google-chrome --version
+      
+      # 4. Запускаем тесты
+      - name: Run tests
+        run: |
+          pytest tests/ -v --tb=short --maxfail=3
+      
+      # 5. Сохраняем отчеты (опционально)
+      - name: Upload test results
+        if: always()  # Сохраняет отчеты даже при падении тестов
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            reports/
+            *.xml
+            *.html
+            screenshots/
+          retention-days: 7
+      
+      # 6. Показываем ошибки в консоли (для быстрой диагностики)
+      - name: Show logs if failed
+        if: failure()
+        run: |
+          echo "=== Тесты упали! Проверьте логи выше. ==="
