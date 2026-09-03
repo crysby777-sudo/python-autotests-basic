@@ -1,7 +1,7 @@
 import re
-from src.actions.Search_Git.search_issues import search_issues_and_get_matches
-from src.actions.Search_Git.issues_authors import get_issue_authors_by_name
-from src.helpers.url_github import GitHubSearch
+from module_6.src.actions.Search_Git.search_issues import search_issues_and_get_matches
+from module_6.src.actions.Search_Git.issues_authors import get_issue_authors_by_name
+from module_6.src.helpers.url_github import GitHubSearch
 from allure import suite, feature, step, title
 import logging
 

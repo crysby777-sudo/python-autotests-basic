@@ -1,3 +1,4 @@
+import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
@@ -12,18 +13,22 @@ def search_issues_and_get_matches(selenium,
                                   search_query):
     logging.info("Выполнение сценария на странице: поиск элементов и ввод данных")
 
-    with step(f"Открываем поиск и вводим ключевое слово '{keyword}'"):
+    with (step(f"Открываем поиск и вводим ключевое слово '{keyword}'")):
         selenium.find_element(By.CSS_SELECTOR, 'button[aria-label*="Search"]').click()
-        selenium.find_element(By.CSS_SELECTOR, '#query-builder-test').send_keys(search_query + Keys.ENTER)
+        #selenium.find_element(By.CSS_SELECTOR, '#query-builder-test').send_keys(search_query + Keys.ENTER)
+        time.sleep(3)
+        selenium.find_element(By.XPATH, '//input[@placeholder="Search or jump to..."]').send_keys(search_query + Keys.ENTER)
 
     with step("Ждем появления результатов поиска"):
         wait = WebDriverWait(selenium, 15)
-        wait.until(EC.presence_of_element_located((By.XPATH, "//span[contains(@class, 'search-match')]")))
+        #wait.until(EC.presence_of_element_located((By.XPATH, "//span[contains(@class, 'search-match')]")))
+        wait.until(EC.presence_of_element_located((By.XPATH, "//div//h3[contains(@class, 'Header-module')]")))
 
     with step(f"Ищем элементы с ключевым словом '{keyword}'"):
-        xpath = (f"//span[contains(@class, 'search-match')]//em[contains(translate"
+        """xpath = (f"//span[contains(@class, 'search-match')]//em[contains(translate"
+                 f"(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '{keyword}')]")"""
+        xpath = (f"//div//h3[contains(@class, 'Header-module')]//em[contains(translate"
                  f"(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '{keyword}')]")
-
     key_word = selenium.find_elements(By.XPATH, xpath)
 
     with step("Отправляем найденные названия задач для проверки"):
