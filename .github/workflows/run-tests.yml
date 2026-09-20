@@ -20,7 +20,7 @@ jobs:
       - name: Setup Conda Environment
         uses: conda-incubator/setup-miniconda@v3
         with:
-          activate-environment: pizzeria-env # Название вашего conda-окружения
+          activate-environment: final_project_pizzeria # Название вашего conda-окружения
           environment-file: Final_project_Pizzeria/environment.yml
           auto-activate-base: false
 
