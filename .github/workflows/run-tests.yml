@@ -1,4 +1,4 @@
-name: Run Pizzeria Autotests
+name: Run Autotests
 
 on:
   push:
@@ -20,13 +20,13 @@ jobs:
       - name: Setup Conda Environment
         uses: conda-incubator/setup-miniconda@v4
         with:
-          activate-environment: final_project_pizzeria # Название вашего conda-окружения
-          environment-file: Final_project_Pizzeria/environment.yml
+          activate-environment: module_7_playwright # Название вашего conda-окружения
+          environment-file: module_7_playwright/environment.yml
           auto-activate-base: false
 
       # 3. Переходим в директорию проекта и запускаем тесты
       - name: Run Pytest
         shell: bash -l {0} # Обязательно для корректной работы активированного Conda-окружения
         run: |
-          cd Final_project_Pizzeria/tests/Flou_promocod
+          cd module_7_playwright
           pytest -v
