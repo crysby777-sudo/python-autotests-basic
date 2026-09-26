@@ -28,5 +28,5 @@ jobs:
       - name: Run Pytest
         shell: bash -l {0} # Обязательно для корректной работы активированного Conda-окружения
         run: |
-          cd Final_project_Pizzeria/tests/Choise_desert
+          cd Final_project_Pizzeria/tests/Flou_bonus_program
           pytest -v
